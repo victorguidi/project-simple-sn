@@ -9,6 +9,7 @@ import (
 )
 
 func Create(w http.ResponseWriter, r *http.Request) {
+	enableCors(&w)
 	var todo models.Todo
 
 	err := json.NewDecoder(r.Body).Decode(&todo)

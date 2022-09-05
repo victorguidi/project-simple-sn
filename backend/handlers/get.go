@@ -11,6 +11,7 @@ import (
 )
 
 func Get(w http.ResponseWriter, r *http.Request) {
+	enableCors(&w)
 	id, err := strconv.Atoi(chi.URLParam(r, "id"))
 	if err != nil {
 		log.Printf("Error when parsing the id: %v", err)

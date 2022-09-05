@@ -11,6 +11,7 @@ import (
 )
 
 func Update(w http.ResponseWriter, r *http.Request) {
+	enableCors(&w)
 	id, err := strconv.Atoi(chi.URLParam(r, "id"))
 	if err != nil {
 		log.Printf("Erro ao fazer parse do id: %v", err)
