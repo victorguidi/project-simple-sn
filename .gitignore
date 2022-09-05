@@ -6,3 +6,4 @@ my_app/test
 my_app/linux
 my_app/ios
 my_app/android
+backend/config.toml
