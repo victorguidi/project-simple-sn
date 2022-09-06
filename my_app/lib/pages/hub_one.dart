@@ -38,7 +38,7 @@ class HubOne extends StatelessWidget {
 
           return ListTile(
             title: Text(p.title),
-            subtitle: Text(p.body),
+            subtitle: Text(p.description),
           );
         },
       );

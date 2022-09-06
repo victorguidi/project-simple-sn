@@ -6,8 +6,16 @@ import 'package:my_app/models/post.dart';
 import 'package:my_app/models/user.dart';
 
 class UsersApi {
+  // static Future<List<Post>> getPost() async {
+  //   const url = 'https://jsonplaceholder.typicode.com/posts';
+  //   final response = await http.get(Uri.parse(url));
+  //   final body = json.decode(response.body);
+  //   var data = body.map<Post>(Post.fromJson).toList();
+
+  //   return body.map<Post>(Post.fromJson).toList();
+  // }
   static Future<List<Post>> getPost() async {
-    const url = 'https://jsonplaceholder.typicode.com/posts';
+    const url = 'http://localhost:9000/';
     final response = await http.get(Uri.parse(url));
     final body = json.decode(response.body);
     var data = body.map<Post>(Post.fromJson).toList();
